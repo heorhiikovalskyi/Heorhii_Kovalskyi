@@ -1,2 +1,1 @@
-I run files in such way:
-ts-node-esm ./index.ts
+I run files with "ts-node-esm" command
