@@ -15,11 +15,11 @@
             "line": 5,
             "name": "I add new job",
             "match": {
-              "location": "src\\features\\step_definitions\\addJobSteps.ts:10"
+              "location": "src\\features\\step_definitions\\addJobSteps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 25514559199
+              "duration": 14117518700
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 7,
             "name": "check available jobs",
             "match": {
-              "location": "src\\features\\step_definitions\\addJobSteps.ts:26"
+              "location": "src\\features\\step_definitions\\addJobSteps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 15192600
+              "duration": 3915309999
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 9,
             "name": "there is added job",
             "match": {
-              "location": "src\\features\\step_definitions\\addJobSteps.ts:31"
+              "location": "src\\features\\step_definitions\\addJobSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 371601799
+              "duration": 376570700
             }
           }
         ],
@@ -76,11 +76,11 @@
             "line": 5,
             "name": "I delete job",
             "match": {
-              "location": "src\\features\\step_definitions\\deleteJobSteps.ts:10"
+              "location": "src\\features\\step_definitions\\deleteJobSteps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 487257099
+              "duration": 535687900
             }
           },
           {
@@ -89,11 +89,11 @@
             "line": 7,
             "name": "check available jobs",
             "match": {
-              "location": "src\\features\\step_definitions\\addJobSteps.ts:26"
+              "location": "src\\features\\step_definitions\\addJobSteps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 9491500
+              "duration": 3125222100
             }
           },
           {
@@ -102,11 +102,11 @@
             "line": 9,
             "name": "there is no deleted job",
             "match": {
-              "location": "src\\features\\step_definitions\\deleteJobSteps.ts:22"
+              "location": "src\\features\\step_definitions\\deleteJobSteps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 950399
+              "duration": 441458599
             }
           }
         ],

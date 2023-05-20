@@ -1,4 +1,4 @@
-import { WebDriver } from "selenium-webdriver";
+import { WebDriver, until } from "selenium-webdriver";
 import { By } from "selenium-webdriver";
 import { JobTitlesPage } from "./jobTitlesPage";
 import { PageFactory } from "./pageFactory";
@@ -19,6 +19,7 @@ export class TopbarMenu {
     return this;
   }
   async jobTitles(): Promise<JobTitlesPage> {
+    await this.driver.wait(until.elementLocated(this.jobLocator));
     await this.job();
     await this.driver.findElement(this.jobList["Job Titles"]).click();
     const pageFactory = PageFactory.getInstance();
