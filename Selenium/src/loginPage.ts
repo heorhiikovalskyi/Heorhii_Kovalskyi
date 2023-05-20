@@ -1,6 +1,7 @@
 import { WebDriver, By } from "selenium-webdriver";
-import { BasePage } from "./basePage.js";
-import { DashboardPage } from "./dashboardPage.js";
+import { BasePage } from "./basePage";
+import { DashboardPage } from "./dashboardPage";
+import { PageFactory } from "./pageFactory";
 export class LoginPage extends BasePage {
   private usernameLocator: By = By.name("username");
   private passwordLocator: By = By.name("password");
@@ -18,8 +19,8 @@ export class LoginPage extends BasePage {
   }
   async submitLogin(): Promise<DashboardPage> {
     await this.driver.findElement(this.loginButtonLocator).submit();
-    // await new Promise((resolve) => setTimeout(resolve, 500));
-    return new DashboardPage(this.driver);
+    const pageFactory = PageFactory.getInstance();
+    return pageFactory.dashboard(this.driver);
   }
   async login(username: string, password: string): Promise<DashboardPage> {
     await this.typeUsername(username);

@@ -1,8 +1,9 @@
 import { WebDriver, By, WebElement } from "selenium-webdriver";
-import { BasePage } from "./basePage.js";
-import { MenuBar } from "./menuBar.js";
-import { TopbarMenu } from "./topbarMenu.js";
-import { SaveJobPage } from "./saveJobPage.js";
+import { BasePage } from "./basePage";
+import { MenuBar } from "./menuBar";
+import { TopbarMenu } from "./topbarMenu";
+import { SaveJobPage } from "./saveJobPage";
+import { PageFactory } from "./pageFactory";
 export class JobTitlesPage extends BasePage {
   menuBar: MenuBar;
   topbarMenu: TopbarMenu;
@@ -10,6 +11,7 @@ export class JobTitlesPage extends BasePage {
   private jobs = {
     updateLocator: By.css("i.oxd-icon.bi-pencil-fill"),
     deleteLocator: By.css("i.oxd-icon.bi-trash"),
+    titleLocator: By.css("div.data"),
   };
   private jobsLocator: By = By.css(".oxd-table-card");
   private deleteNotification = {
@@ -23,7 +25,8 @@ export class JobTitlesPage extends BasePage {
   }
   async add(): Promise<SaveJobPage> {
     await this.driver.findElement(this.addLocator).click();
-    return new SaveJobPage(this.driver);
+    const pageFactory = PageFactory.getInstance();
+    return pageFactory.saveJob(this.driver);
   }
   async getJobs(): Promise<WebElement[]> {
     const jobs = await this.driver.findElements(this.jobsLocator);

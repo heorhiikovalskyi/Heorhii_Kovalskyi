@@ -1,8 +1,9 @@
 import { WebDriver, By } from "selenium-webdriver";
-import { BasePage } from "./basePage.js";
-import { MenuBar } from "./menuBar.js";
-import { TopbarMenu } from "./topbarMenu.js";
-import { JobTitlesPage } from "./jobTitlesPage.js";
+import { BasePage } from "./basePage";
+import { MenuBar } from "./menuBar";
+import { TopbarMenu } from "./topbarMenu";
+import { JobTitlesPage } from "./jobTitlesPage";
+import { PageFactory } from "./pageFactory";
 export class SaveJobPage extends BasePage {
   menuBar: MenuBar;
   topbarMenu: TopbarMenu;
@@ -32,7 +33,8 @@ export class SaveJobPage extends BasePage {
   }
   async submit(): Promise<JobTitlesPage> {
     await this.driver.findElement(this.saveLocator).submit();
-    return new JobTitlesPage(this.driver);
+    const pageFactory = PageFactory.getInstance();
+    return pageFactory.jobTitles(this.driver);
   }
   async addJob(title: string, description: string, notes: string): Promise<JobTitlesPage> {
     await this.typeTitle(title);

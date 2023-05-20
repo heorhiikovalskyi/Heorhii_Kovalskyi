@@ -1,7 +1,7 @@
 import { WebDriver, By } from "selenium-webdriver";
-import { BasePage } from "./basePage.js";
-import { MenuBar } from "./menuBar.js";
-import { TopbarMenu } from "./topbarMenu.js";
+import { BasePage } from "./basePage";
+import { MenuBar } from "./menuBar";
+import { TopbarMenu } from "./topbarMenu";
 export class UserManagementPage extends BasePage {
   menuBar: MenuBar;
   topbarMenu: TopbarMenu;
