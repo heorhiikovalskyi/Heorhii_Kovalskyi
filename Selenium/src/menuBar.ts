@@ -4,7 +4,6 @@ import { UserManagementPage } from "./userManagementPage";
 import { PageFactory } from "./pageFactory";
 export class MenuBar {
   private driver: WebDriver;
-  //private adminLocator: By = By.css("span.oxd-main-menu-item--name");
   private adminLocator: By = By.css('a[href$="/viewAdminModule"]');
   //pimLocator
   //leaveLocator

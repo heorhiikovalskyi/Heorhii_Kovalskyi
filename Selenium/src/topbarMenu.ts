@@ -4,7 +4,6 @@ import { JobTitlesPage } from "./jobTitlesPage";
 import { PageFactory } from "./pageFactory";
 export class TopbarMenu {
   private driver: WebDriver;
-  //private jobLocator: By = By.css("li.oxd-topbar-body-nav-tab");
   private jobLocator: By = By.xpath("//*[text()='Job ']");
   private jobList = { "Job Titles": By.xpath("//*[text()='Job Titles']") };
   //userManagementLocator=...
